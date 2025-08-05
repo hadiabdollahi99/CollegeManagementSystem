@@ -91,17 +91,17 @@ public class StudentRepository {
     }
 
     public void insertSampleStudents () {
-        List<Student> students = new ArrayList<>();
-        students.add(new Student(1, "John Smith", "Computer Science", 3, 3.75));
-        students.add(new Student(2, "Emily Johnson", "Electrical Engineering", 2, 3.92));
-        students.add(new Student(3, "Michael Brown", "Mathematics", 4, 3.42));
-        students.add(new Student(4, "Sarah Davis", "Physics", 1, 3.95));
-        students.add(new Student(5, "David Wilson", "Mechanical Engineering", 3, 3.15));
-        students.add(new Student(6, "Jessica Miller", "Computer Science", 2, 3.78));
-        students.add(new Student(7, "Robert Taylor", "Industrial Engineering", 4, 3.28));
-        students.add(new Student(8, "Jennifer Anderson", "Chemistry", 2, 3.85));
-        students.add(new Student(9, "Williams Thomas", "Civil Engineering", 3, 3.50));
-        students.add(new Student(10, "Elizabeth Jackson", "Biomedical Engineering", 4, 3.88));
+        List<Student> students = new ArrayList<>(List.of(
+                new Student(1, "John Smith", "Computer Science", 3, 3.75),
+                new Student(2, "Emily Johnson", "Electrical Engineering", 2, 3.92),
+                new Student(3, "Michael Brown", "Mathematics", 4, 3.42),
+                new Student(4, "Sarah Davis", "Physics", 1, 3.95),
+                new Student(5, "David Wilson", "Mechanical Engineering", 3, 3.15),
+                new Student(6, "Jessica Miller", "Computer Science", 2, 3.78),
+                new Student(7, "Robert Taylor", "Industrial Engineering", 4, 3.28),
+                new Student(8, "Jennifer Anderson", "Chemistry", 2, 3.85),
+                new Student(9, "Williams Thomas", "Civil Engineering", 3, 3.50),
+                new Student(10, "Elizabeth Jackson", "Biomedical Engineering", 4, 3.88)));
 
         StudentRepository studentRepository = new StudentRepository();
         createTableStudent();

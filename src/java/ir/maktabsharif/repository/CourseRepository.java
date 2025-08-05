@@ -87,12 +87,12 @@ public class CourseRepository {
     }
 
     public void insertSampleCourses () {
-        List<Course> courses = new ArrayList<>();
-        courses.add(new Course(101, "Advanced Programming", "Computer Science", 3));
-        courses.add(new Course(102, "Electric Circuits", "Electrical Engineering", 4));
-        courses.add(new Course(103, "Discrete Mathematics", "Mathematics", 3));
-        courses.add(new Course(104, "Modern Physics", "Physics", 4));
-        courses.add(new Course(105, "Probability and Statistics", "Mathematics", 3));
+        List<Course> courses = new ArrayList<>(List.of(
+                new Course(101, "Advanced Programming", "Computer Science", 3),
+                new Course(102, "Electric Circuits", "Electrical Engineering", 4),
+                new Course(103, "Discrete Mathematics", "Mathematics", 3),
+                new Course(104, "Modern Physics", "Physics", 4),
+                new Course(105, "Probability and Statistics", "Mathematics", 3)));
 
         CourseRepository courseRepository = new CourseRepository();
         createTableCourse();

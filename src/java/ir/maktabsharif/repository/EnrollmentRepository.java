@@ -92,22 +92,22 @@ public class EnrollmentRepository {
     }
 
     public void insertSampleEnrollment () {
-        List<Enrollment> enrollments = new ArrayList<>();
-        enrollments.add(new Enrollment(1, 101, LocalDate.of(2025,7,20), 20));
-        enrollments.add(new Enrollment(1, 103, LocalDate.of(2025,7,21), 17.75));
-        enrollments.add(new Enrollment(2, 102, LocalDate.of(2025,7,22), 19.5));
-        enrollments.add(new Enrollment(2, 105, LocalDate.of(2025,7,23), 18.25));
-        enrollments.add(new Enrollment(3, 101, LocalDate.of(2025,7,24), 13));
-        enrollments.add(new Enrollment(3, 104, LocalDate.of(2025,7,25), 19.75));
-        enrollments.add(new Enrollment(4, 103, LocalDate.of(2025,7,26), 14.5));
-        enrollments.add(new Enrollment(4, 105, LocalDate.of(2025,7,27), 12));
-        enrollments.add(new Enrollment(5, 102, LocalDate.of(2025,7,28), 10));
-        enrollments.add(new Enrollment(5, 104, LocalDate.of(2025,7,29), 16.5));
-        enrollments.add(new Enrollment(6, 101, LocalDate.of(2025,7,30), 18));
-        enrollments.add(new Enrollment(6, 105, LocalDate.of(2025,7,31), 19));
-        enrollments.add(new Enrollment(7, 103, LocalDate.of(2025,8,1), 12.5));
-        enrollments.add(new Enrollment(8, 102, LocalDate.of(2025,8,2), 14));
-        enrollments.add(new Enrollment(9, 104, LocalDate.of(2025,8,3), 10));
+        List<Enrollment> enrollments = new ArrayList<>(List.of(
+                new Enrollment(1, 101, LocalDate.of(2025,7,20), 20),
+                new Enrollment(1, 103, LocalDate.of(2025,7,21), 17.75),
+                new Enrollment(2, 102, LocalDate.of(2025,7,22), 19.5),
+                new Enrollment(2, 105, LocalDate.of(2025,7,23), 18.25),
+                new Enrollment(3, 101, LocalDate.of(2025,7,24), 13),
+                new Enrollment(3, 104, LocalDate.of(2025,7,25), 19.75),
+                new Enrollment(4, 103, LocalDate.of(2025,7,26), 14.5),
+                new Enrollment(4, 105, LocalDate.of(2025,7,27), 12),
+                new Enrollment(5, 102, LocalDate.of(2025,7,28), 10),
+                new Enrollment(5, 104, LocalDate.of(2025,7,29), 16.5),
+                new Enrollment(6, 101, LocalDate.of(2025,7,30), 18),
+                new Enrollment(6, 105, LocalDate.of(2025,7,31), 19),
+                new Enrollment(7, 103, LocalDate.of(2025,8,1), 12.5),
+                new Enrollment(8, 102, LocalDate.of(2025,8,2), 14),
+                new Enrollment(9, 104, LocalDate.of(2025,8,3), 10)));
 
         EnrollmentRepository enrollmentRepository = new EnrollmentRepository();
         createTableEnrollment();
